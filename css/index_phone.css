@@ -1,0 +1,279 @@
+/* ------------ preset start ------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --------------------------------- */
+
+[class^="col"] {
+    padding: 15px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.col-12 {
+    flex: 0 0 calc(100% / 12 * 12);
+}
+
+/* --------------------------------- */
+
+.full-width {
+    width: 100%;
+}
+
+.clearfix::after {                        
+    display: block;
+    content: "";                          
+    clear: both;
+}
+
+/* ------------ nav start ------------ */
+#nav {
+    background-color: rgba(0, 0, 0, 0.9); 
+    height: auto !important;
+    width: 100%;
+    position: relative; 
+    z-index: 999;
+    padding: 20px 0;
+}
+
+#nav .row{
+    display: flex;
+    flex-direction: column;             /* Logo + 選單垂直排列 */
+    align-items: center;                /* row 區塊內 水平置中 */
+}
+
+#nav .logo {
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;                /* Logo 與選單之間的間隔 */
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    width: 80%; 
+    padding-bottom: 15px;
+    width: 210px;
+    height: 58px;
+    background: url('../images/Logo.png');
+}
+
+#nav .menu {
+    width: 100%;
+}
+
+#nav .menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 0;
+}
+
+    #nav .menu ul li:last-child {        /* phone 新增 */
+        padding-bottom: 15px;
+    }
+
+#nav .menu li {  
+    width: 100%;
+    text-align: center;                /* phone 新增 */
+}
+
+#nav .menu a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 0;
+    letter-spacing: 2px;
+    transition: background 0.3s;
+}
+
+    #nav .menu a:active {
+        background-color: rgba(255, 255, 255, 0.1); /* 點擊時的視覺回饋 */
+    }
+
+    
+/* ---------- header start ---------- */
+header {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.75),rgba(41, 41, 41, 0.5)),
+        url("../images/banner_home.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;       
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+header .row{
+    height: auto !important;
+    width: 100%;
+    align-items: center;
+    padding: 80px 20px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 2.2rem;                    
+    padding-bottom: 15px;
+}
+
+header p {
+    margin: auto;                       
+    line-height: 1.6rem; 
+    font-size: 1rem;     
+    width: 90%;                                  
+}
+
+/* ---------- camera start ---------- */
+#camera {
+    margin: 80px 0 40px 0;
+}
+
+#brand {
+    /* width: 500px; 取消 */
+    /* float: left; 取消 */
+    padding-top: 50px;                      /* phone 修改 */
+}
+
+h2.title {
+    text-align: center;
+    border: 3px solid #000;               /* phone 修改 */
+    font-size: 2rem;                        /* phone 修改 */
+    width: 250px;                           /* phone 修改 */
+    padding: 10px 0;
+    margin: auto;
+    
+}
+p.article {
+    line-height: 1.6rem;
+    /* font-size: 1.2rem;                   按內文調整尺寸 */
+    text-align: center;
+    margin-top: 40px;                       /* phone 修改 */
+}
+
+/* -------------------- 垂直單排顯示 ---------------------
+#four-major-brands {
+    width: 60%;
+    padding: 80px 0; 
+    margin:auto; 
+}
+    .gallery { 
+        height: auto; 
+        overflow: hidden;
+        border: 1px solid rgb(168, 168, 168);
+    }
+        .gallery img {
+            width: 100%;
+            height: 30%;
+        }
+------------------------------------------------------ */
+
+#four-major-brands {
+    width: 530px;                             /* phone 修改 */
+    /* float: right; 取消 */
+    padding: 40px 0 40px 0;                   /* phone 修改 */
+    margin: auto;
+}
+
+.gallery {
+    width: 250px;                         /* phone 修改 */
+    height: 159px;                        /* phone 修改 */
+    margin: 5px;
+    overflow: hidden;                     /* 溢位：隱藏 */
+    float: left;
+    border: 1px solid rgb(168, 168, 168);
+}
+
+.gallery img {
+    width: 100%;
+}
+
+/* ---------- banner_news start ---------- */
+
+#banner_news {
+    color: #fff;
+    /*text-align: center;*/
+    /*background:  #fdd url('../images/banner_2.JPG') left top no-repeat;*/
+    padding-top: 80px;                         /* phone 修改 */
+}
+
+#banner_news a img {
+    background-size: cover;
+    width: 100%;                           /* banner_news 尺寸 */
+    height: 380px;                         /* phone 修改 */
+}
+
+/* ------------- contact start ------------ */
+#contact {
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    padding: 50px 0;                           /* phone 修改 */
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6rem;                     /* phone 修改 */
+    color: rgb(187, 127, 127);
+    letter-spacing: 0.1rem;
+    margin: 0;                             /* phone 新增 */
+    padding: 0;                            /* phone 新增 */
+}
+
+#contact p {
+    font-size: 1.3rem;                     /* phone 修改 */
+    letter-spacing: 0.2rem;
+    padding-top: 25px;
+}
+
+#connect {
+    /* width: 50%;
+    float: left; 取消 */
+    padding-top: 50px; 
+}
+
+#connect ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    #connect li img {
+        margin: 5px 12px 10px 12px;         /* phone 修改 */
+        width: 50px;
+        padding: 20px 0 25px 0;
+    }
+
+#call {
+    /* width: 50%;
+    float: right; 取消 */
+    padding: 10px 0;
+}
+
+/* ------------- footer start ------------- */
+footer {
+    line-height: 30px;                             /* phone 修改 */
+    background-color: rgb(128, 88, 88);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 1.1rem;                         /* phone 修改 */
+}
+    

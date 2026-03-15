@@ -1,0 +1,287 @@
+/* ------------ preset start ------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+[class^="col"] {
+    padding: 15px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.col-12 {
+    flex: 0 0 calc(100% / 12 * 12);
+}
+
+/* ------------ preset start ------------ */
+
+.full-width {
+    width: 100%;
+}
+
+.clearfix::after { 
+    display: block;
+    content: ""; 
+    clear: both;
+}
+
+/* ------------ nav start ------------ */
+
+#nav {
+    background-color: #000;
+    /* height: 58; 取消 */
+    /* position: fixed; 取消 */
+    z-index: 999;
+}
+
+#nav .logo {
+    width: 210px;
+    height: 58px;
+    background: url('../images/Logo.png');
+    margin: auto;
+    /* float: left; 取消 */
+}
+
+#nav .row{
+    justify-content: space-between;
+}
+
+#nav .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav .menu li {
+    /* float: left; 取消 */
+    line-height: 35px;                 /* phone 修改 */
+    /* margin-left: 50px; 取消 */
+    text-align: center;                /* phone 新增 */
+}
+
+#nav .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    /* transition: color 0.2s; 取消 */
+    letter-spacing: 2px;                /* phone 修改 */
+}
+
+    #nav .menu ul li:last-child {        /* phone 新增 */
+        padding-bottom: 15px;
+    }
+
+/* ---------- header start ---------- */
+header {
+    color: rgb(255, 147, 147);
+    text-align: center;                    /* 內容文字置中 */
+    background: #fdd url('../images/banner_camera_phone.png') center center no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed;        背景-附件：固定； */
+}
+
+header .row {
+    height: 78vh;                      /* phone 修改 */
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header p {
+    /* letter-spacing: 1px; 取消 */
+    margin: 0 50px;                     /* 對應 overlay padding 上下位置 */
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+/* ---------- recommend start ---------- */
+
+#recommend {
+    background-color: rgb(187, 127, 127);
+    padding: 120px 0;                       /* phone 修改 */
+}
+
+#recommend h2 {
+    font-size: 2rem;                    /* phone 修改 */
+    color:#fff;
+}
+
+#recommend p {
+    margin: 30px 0;
+    line-height: 28px;
+    font-size: 1rem;                    /* phone 修改 */
+    color:#fff;
+    letter-spacing: 1px;
+}
+
+#recommend .btnView {
+    background-color: rgb(187, 127, 127);
+    color: #fff;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 18px;                     /* phone 修改 */
+    border: 2px solid #ffffff	;
+    text-decoration: none;
+    /* margin-top: 5px; 取消 */
+}
+
+/* ---------- function start ---------- */
+
+#function {
+    padding: 120px 0 100px 0;
+    width: 100%;
+    margin: auto; 
+    text-align: center;
+}
+
+#function .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#function h2 { 
+    margin-bottom: 50px;
+    font-size: 2.5rem;                  /* 對應 function padding 調整 */
+}
+
+#function h3 {
+    margin: 20px 0;                     /* phone 修改 */
+    font-size: 1.5rem;                  /* 對應 function padding 調整 */
+}
+
+#function p {
+    color:rgb(187, 127, 127);
+    line-height: 25px;
+    font-size: 1.1rem;
+    padding-bottom: 40px;
+}
+
+/* ---------- container start ---------- */
+/* ---------- contact start ------------ */
+
+.container {
+    background-color: rgb(105, 105, 105);
+    /* border-top: 1px solid rgb(151, 151, 151); */
+    position: relative; 
+}
+
+.container .no-padding > [class^="col"] {
+    padding: 0!important;                     /* Camera 圖片貼緊 */
+}
+
+.container #model { 
+    background-color: rgb(255, 80, 80);
+    /* position: flex; 取消 */
+}
+.container #model h2 { 
+    padding: 10px 0;
+    font-size: 36px; 
+}
+
+.container #model .box {
+    position: relative;
+}
+
+    .container #model .box img {
+        width: 100%;
+    }
+
+.container #model .box .content {
+    background-color: #ff6c47;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;                                 /* 覆蓋超出...將 bottom 設零 */
+    /* https://www.w3schools.com/cssref/css3_pr_flex-direction.asp */
+    /* https://wcc723.github.io/css/2017/07/21/css-flex/ */
+    display: flex;                             /* 顯示：對齊 */
+    flex-direction: column;                    /* /* 彈性-方向：列...對應 display */
+    align-items: center;                       /* 對應 flex-direction */
+    justify-content: center;                   /* 對應 flex-direction */
+    opacity: 0;
+    /* transition: .3s; 取消 */
+}
+
+/* ---------- contact start ------------ */
+
+#contact {
+    background-color: #fff;
+    margin: 80px 0 30px 0;                       /* phone 修改 對應 .col-12 */
+    padding: 0 25px;                             /* phone 增加 */
+}
+    /* #contact .row {
+        align-items: center;
+    }  取消 */
+    
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+#contact .form-group {
+    padding-bottom: 10px;
+    font-size: 1.1rem;                         /* phone 新增 */
+}
+
+    #contact .form-group #comment {
+        height: 150px;
+    }
+
+#contact .form-control {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 5px;
+    outline: 0;                                 /* 輪廓：無...表格外框線 */
+    transition: .5s;
+}
+
+#contact .form-control:focus {
+    border-color: rgb(255, 50, 50);
+}
+
+#contact .btnSubmit {
+    background-color: rgb(255, 80, 80);
+    color: #fff;
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;                             /* phone 修改 */
+    width: 100%;                                 /* phone 增加 對應 contact padding */
+}
+
+/* ------------- footer start ------------- */
+
+footer {
+    line-height: 30px;                        /* phone 修改 */
+    background-color: rgb(128, 88, 88);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 1.1rem;                    /* phone 修改 */
+}
+    
+
+
+      
+      

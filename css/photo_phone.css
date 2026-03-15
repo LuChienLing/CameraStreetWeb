@@ -1,0 +1,304 @@
+/* ------------ preser start ------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+  
+a {
+    text-decoration: none;
+}
+
+/* ------------- grid ------------- */
+ 
+[class^="col"] {
+    padding: 15px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.col-12 {
+    flex: 0 0 calc(100% / 12 * 12);
+}
+
+/* ------------------------------------ */
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    width: 840px;
+    margin: auto;
+}
+
+.clearfix::after { 
+    display: block;
+    content: ""; 
+    clear: both;
+}
+
+
+/* ------------ nav start ------------ */
+
+#nav {
+    background-color: rgba(43, 81, 187, 0.5);
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    
+}
+
+#nav .row{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+}
+
+#nav .logo {
+    width: 290px;
+    height: 60px;
+    background: url('../images/Logo.png');
+    display: block;
+    margin-left: 60px;
+}
+
+#nav .menu {
+    width: 100%;
+}
+
+#nav .menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    line-height: 40px;
+    margin: 0 10px;
+    padding-left: 170px;
+}
+
+#nav .menu li {
+    display: inline-block;  /* 讓選單文字橫向排列，排不下自動換行 */
+    line-height: 80px;
+    margin: 0 15px;
+    
+}
+
+#nav .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: 1px; 
+}
+            
+/* ---------- header start ---------- */
+
+header {
+    background: #fdd url('../images/photo_banner.jpg') center center no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed;        背景-附件：固定； */
+}
+
+header .row {
+    height: 100vh;
+}
+
+header .depiction {
+    vertical-align: bottom;
+    padding-top: 850px;
+} 
+
+header p {
+    color: #ccc;
+    font-size: 0.85rem;
+    font-style: italic ;
+    text-shadow: 0 0 0.2em rgb(98, 85, 180), 0 0 0.2em rgb(98, 85, 180);
+}
+
+/* ---------- Foreign platform start ---------- */
+
+.foreign {
+    margin-top: 180px;
+    border-bottom: 2px dashed rgb(88, 88, 88);
+}
+
+.foreign .fixed-width {
+    background-color: #fff;
+    height: 470px;
+    text-align: center;
+}
+
+.foreign h2 {
+    color: rgb(51, 51, 51);
+    font-size: 2rem;
+}
+
+.foreign p {
+    color: rgb(51, 51, 51);
+    letter-spacing: 1px;
+}
+
+.foreign .item {
+    margin: 60px auto;
+}
+
+.foreign .item div {
+    width: calc(33.3% - 1px);              /* item 內項目各33% - border 1px*/
+    float: left;
+    padding: 40px 0 10px 2px;
+    border-right: 1px solid #aaa;
+}
+    
+    .foreign .item div:nth-child(3) {      /* 最後一個不加 border 線條 */
+        border-right-width: 0;
+    }
+
+.foreign img {
+    display: block;
+    border: 1px solid rgb(88, 88, 88);
+    width: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: auto;
+    font-size: 2rem;
+}
+        
+    .foreign .item div:nth-child(1) img {
+        color: #abc99d;
+    }
+
+    .foreign .item div:nth-child(2) img {
+        color: #079cba;
+    }
+    
+    .foreign .item div:nth-child(3) img {
+        color: #aa0c7b;
+    }
+
+.foreign h3 {
+    padding: 20px 0;
+}
+
+.foreign p {
+    line-height: 20px;;
+}
+
+/* ---------- Photography start ---------- */
+
+#Photography {
+    background-color: rgb(255, 255, 255);;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#Photography .gallery #option{
+    display: block;
+    text-align: center;
+}
+
+#Photography .gallery #option h1 {
+    float: left;
+    font-size: 2.4rem;
+    color: rgb(88, 88, 88);
+}
+
+#Photography .gallery #option ul {
+    list-style: none;
+    padding-top: 5px;                             /* 對應 h1 保持水平 */
+}
+
+#Photography .gallery #option li {
+    float: right;
+    line-height: 30px;             /* 行高...對應 nav */
+    margin-left: 10px;             /* 字距...對應 nav a */
+}
+
+#Photography .gallery #option a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;           /* 字母間距...對應 nav li */
+}
+
+#Photography #option .tabBtn li .button {
+    display: inline-block;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #000;
+    padding: 0 25px;
+    background-color: rgb(255,255,255,.8);
+    border: 3px solid rgb(100, 100, 100);
+    transition: .3s;
+    font-weight: bold;
+}
+
+/* https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
+@keyframes gallery {
+    100% {
+        opacity: 1;		
+    }
+}
+
+.gallery {
+    padding: 3.5em;
+    position: relative;
+    overflow: hidden;
+    min-height: 37em;
+}
+
+.gallery .content {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.gallery .content .media {
+    animation: gallery 0.75s ease-out 0.4s forwards;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
+    width: 50%;                              /* 單列顯示 2 張 */
+}
+
+.gallery .content .media a {
+    display: block;
+}
+
+.gallery .content .media img {
+    transition: transform 0.4s ease-in-out;  /* 緩入秒數對應 hover 放大效果 */
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* https://www.itread01.com/p/668799.html */
+.gallery .content .media:hover img {
+    transform: scale(1.2);
+}
+
+/* ------------- footer start ------------- */
+
+footer {
+    line-height: 30px;
+    background-color: rgb(128, 88, 88);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 1.1rem;
+}
+  
+  
